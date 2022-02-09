@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather Dashboard</title>
 </head>
 <body>
     
-
+    <header class="mainNav">
     <div class="container">
+        <h1>Searchable Weather Dashboard</h1>
         <div class="col-3">
         <input type="text" placeholder="Search for a city" class="input_text">
         <input type="submit" value="Submit" class="submit">
@@ -19,8 +20,8 @@
       </div>
 
     </header>
-    <h1 id="test"></h1>
-    <div class="container">
+
+    <div class="mainContainer">
         <div>
             <h1 class="city">City</h1>
             <p class="icon"></p>
@@ -29,29 +30,24 @@
             <p class="temp"></p>
             <p class="humidity"></p>
             <p>
-                <span class="uv"></span>
+            <span class="uv"></span>
             </p>
-
         </div>
-
-
-
-
-
-
-
 
 
     </div>
 
-
-
-
-
+    <div class="fiveDay">
+        <div class="day1">p</div>
+        <div class="day2">p</div>
+        <div class="day3">p</div>
+        <div class="day4">p</div>
+        <div class="day5">p</div>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./assets/script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 </html>

@@ -9,7 +9,6 @@ function searchCity() {
     console.log(cityArray) // sanity checks
     console.log(cityName) // sanity checks
     getWeather()
-
 }
 
 $(".submit").click(searchCity)
@@ -36,7 +35,7 @@ function getWeather() {
 
             var longitude = data.coord.lat
             var latitude = data.coord.lon
-            var uvUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+ latitude +"&lon="+ longitude +"&exclude=hourly,daily&appid=" + APIkey;
+            var uvUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+ latitude +"&lon="+ longitude +"&exclude=hourly&units=imperial&appid=" + APIkey;
 
             fetch(uvUrl)
                 .then(function(response2) {
@@ -56,13 +55,28 @@ function getWeather() {
                     else {
                         $(".uv").addClass("bg-light");
                     }
+                    
+                    $(".day1").text(data2.daily[0].temp.day)
+                    $(".day2").text(data2.daily[1].temp.day)
+                    $(".day3").text(data2.daily[2].temp.day)
+                    $(".day4").text(data2.daily[3].temp.day)
+                    $(".day5").text(data2.daily[4].temp.day)
+                    
+
+
+
+
+
+               
 
                 })
+                
         }
-        getUv() 
+
         
+        getUv() 
+
     })   
-    
 
 }
 
